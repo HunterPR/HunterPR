@@ -4,7 +4,8 @@ daily_sync.py: stamp the day's brief onto a Daily Log page of the live Journal (
 Rules:
   - One Daily Log page per day, chosen from the month's DAILY LOG range in <journal>_manifest.json,
     skipping the "carried over" page and any page already assigned in ripple_state["daily_pages"].
-  - A day already stamped is left alone (prints its page). Ink on the page is never touched.
+  - A day already stamped is left alone (prints its page); if its page is still blank (the Journal in
+    Drive was never replaced) the block is stamped there. Ink on the page is never touched.
   - The block is typed at the top of the page under the header: date, today's events, tomorrow's
     first events, due items with checkboxes. Everything below stays free for the rapid log.
 Writes the page number (1-based) into brief.json as "log_page" so build_brief.py can show it.
@@ -103,15 +104,15 @@ def main():
     pdf, brief_path, state_path = args
     brief, state = json.load(open(brief_path)), json.load(open(state_path))
     manifest = json.load(open(os.path.splitext(pdf)[0] + "_manifest.json"))
-    key = day.isoformat()
-    if key in state.get("daily_pages", {}):
-        p = state["daily_pages"][key]
+    key, date_label = day.isoformat(), day.strftime("%a %d %b %Y").upper()
+    w = PdfWriter(clone_from=pdf)
+    p = state.get("daily_pages", {}).get(key)
+    if p is not None and date_label in (w.pages[p].extract_text() or ""):
         print(f"{key} already stamped on page {p + 1}, left alone")
         brief["log_page"] = p + 1; json.dump(brief, open(brief_path, "w"), indent=1); return
-    p = pick_page(log_ranges(manifest), state, day)
+    if p is None: p = pick_page(log_ranges(manifest), state, day)
     rows = block_lines(brief, day)
-    w = PdfWriter(clone_from=pdf)
-    w.pages[p].merge_page(overlay(rows, day.strftime("%a %d %b %Y").upper()))
+    w.pages[p].merge_page(overlay(rows, date_label))
     with open(pdf, "wb") as f: w.write(f)
     state["daily_pages"][key] = p
     json.dump(state, open(state_path, "w"), indent=1)

@@ -53,7 +53,7 @@ Nov 1 run generates Journal_2026-Nov-Dec.pdf, page 1 carried over (`>`) and sche
 Send or reply to mail. Edit or complete Asana tasks. Delete a file. Read a PRIVATE page. Act on anything that isn't your handwriting. Redraw a Daily Log page (the daily block is typed on top, once, and only into a freshly uploaded Journal). A `PAUSE` file in Boox/state stops all runs.
 
 ## Still on you (once)
-1. Re-download the Journal now: 9/13 is stamped on Daily Log p37 (p36 is left for your 9/12 log). If you inked the tablet since the 9/12 upload, upload that first and re-run.
+1. Put the stamped Journal (sent to you in chat on 9/13, block on Daily Log p37; p36 is left for your 9/12 log) into Boox/Journal, overwriting, and onto the tablet. If you inked the tablet since the 9/12 upload, upload that first instead and the next run will stamp p37 itself.
 2. Cowork: new scheduled task, weekdays 06:00 and 12:00, paste the prompt from Boox/state/COWORK_BRIEF_TASK.md (v7). Run it once by hand.
 3. Finish connecting Microsoft 365 in claude.ai (shows connect_incomplete); until then the Brief says Outlook was skipped.
 4. Optional later: FolderSync (Journal two-way, Brief download-only), then set `journal_synced: true` in ripple_state.json so the daily block lands every morning without the Sunday upload.
