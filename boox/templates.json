@@ -1,0 +1,98 @@
+{
+ "fallcal": {
+  "page": 0,
+  "title": "Fall 2026 Training Calendar"
+ },
+ "weekly": {
+  "page": 1,
+  "title": "Weekly Plan"
+ },
+ "meeting": {
+  "page": 2,
+  "title": "Meeting Notes"
+ },
+ "aar": {
+  "page": 3,
+  "title": "AAR / Debrief"
+ },
+ "aerial": {
+  "page": 4,
+  "title": "Aerial Tech Check-off Roster"
+ },
+ "cit": {
+  "page": 5,
+  "title": "CIT Teaching Hours"
+ },
+ "study": {
+  "page": 6,
+  "title": "Study Log"
+ },
+ "dog": {
+  "page": 7,
+  "title": "Dog Training Log"
+ },
+ "reading": {
+  "page": 8,
+  "title": "Reading Queue"
+ },
+ "gear": {
+  "page": 9,
+  "title": "Gear & Reimbursement"
+ },
+ "field": {
+  "page": 10,
+  "title": "Field Log"
+ },
+ "ideas": {
+  "page": 11,
+  "title": "Idea Parking Lot"
+ },
+ "wait": {
+  "page": 12,
+  "title": "Savings-First Wait List"
+ },
+ "wedding": {
+  "page": 13,
+  "title": "Wedding Planning"
+ },
+ "creds": {
+  "page": 14,
+  "title": "Credential Renewals"
+ },
+ "dotgrid": {
+  "page": 15,
+  "title": "Collection (dot grid)"
+ },
+ "checklist": {
+  "page": 16,
+  "title": "Collection (checklist)"
+ },
+ "candor": {
+  "page": 17,
+  "title": "Radical Candor"
+ },
+ "oneonone": {
+  "page": 18,
+  "title": "Counseling / 1 on 1"
+ },
+ "wlodkowski": {
+  "page": 19,
+  "title": "Lesson Design (Wlodkowski)"
+ },
+ "draft": {
+  "page": 20,
+  "title": "Template Draft"
+ },
+ "readme": {
+  "page": 21,
+  "title": "README"
+ },
+ "studyplan": {
+  "page": 22,
+  "title": "Study Plan (12 wk)"
+ },
+ "comms": {
+  "page": 23,
+  "title": "Comms Schedule"
+ }
+}
